@@ -1,0 +1,1651 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"631A43E30065"
+	stereotype 	"Scenarios"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "Bank Customer"
+		quid       	"631A44AB01FA"
+		stereotype 	"Actor")
+	    (object Class "Clerk"
+		quid       	"631A463800A3"
+		stereotype 	"Actor")
+	    (object Class "Loan Officer"
+		quid       	"631A471D0132"
+		stereotype 	"Actor")
+	    (object Class "Manager"
+		quid       	"631A47680266"
+		stereotype 	"Actor")
+	    (object Class "Bank IT Officer"
+		quid       	"631A4B1500BF"
+		stereotype 	"Actor")
+	    (object Class "Database Admin"
+		quid       	"631A4BB601B0"
+		stereotype 	"Actor")
+	    (object Class "Security's Cabin"
+		quid       	"631A4BDC0008"
+		stereotype 	"Actor")
+	    (object Class "(Working Staff)Clerks"
+		quid       	"631A4BDF000E"
+		stereotype 	"Actor")
+	    (object Class "Manager's Cabin"
+		quid       	"631A4BE10280"
+		stereotype 	"Actor")
+	    (object UseCase "Withdraw Cash from Existing Account"
+		quid       	"631A44AF0069")
+	    (object UseCase "NewUseCase2"
+		quid       	"631A44E50192")
+	    (object UseCase "Opens the Account for the customers"
+		quid       	"631A464E03E1")
+	    (object UseCase "Issues the Cheque Operations"
+		quid       	"631A46930241")
+	    (object UseCase "Loan Application"
+		quid       	"631A46E7027A")
+	    (object UseCase "NewUseCase"
+		quid       	"631A471501B6")
+	    (object UseCase "Reports"
+		quid       	"631A478602F4")
+	    (object UseCase "Bank Server"
+		quid       	"631A4B2D037A")
+	    (object Association "$UNNAMED$0"
+		quid       	"631A44B30004"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"631A44B3036A"
+			supplier   	"Use Case View::Withdraw Cash from Existing Account"
+			quidu      	"631A44AF0069"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"631A44B3036B"
+			supplier   	"Use Case View::Bank Customer"
+			quidu      	"631A44AB01FA")))
+	    (object Association "$UNNAMED$3"
+		quid       	"631A450D00A2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"631A450E02CB"
+			supplier   	"Use Case View::NewUseCase2"
+			quidu      	"631A44E50192"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"631A450E02CC"
+			supplier   	"Use Case View::Bank Customer"
+			quidu      	"631A44AB01FA")))
+	    (object Association "$UNNAMED$6"
+		quid       	"631A467801EC"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"631A46790243"
+			supplier   	"Use Case View::Opens the Account for the customers"
+			quidu      	"631A464E03E1"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"631A46790244"
+			supplier   	"Use Case View::Clerk"
+			quidu      	"631A463800A3")))
+	    (object Association "$UNNAMED$9"
+		quid       	"631A46B003CE"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"631A46B201AA"
+			supplier   	"Use Case View::Issues the Cheque Operations"
+			quidu      	"631A46930241"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"631A46B201AB"
+			supplier   	"Use Case View::Clerk"
+			quidu      	"631A463800A3")))
+	    (object Association "$UNNAMED$12"
+		quid       	"631A4701030C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$13"
+			quid       	"631A47030252"
+			supplier   	"Use Case View::Loan Application"
+			quidu      	"631A46E7027A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$14"
+			quid       	"631A47030253"
+			supplier   	"Use Case View::Bank Customer"
+			quidu      	"631A44AB01FA")))
+	    (object Association "$UNNAMED$15"
+		quid       	"631A473603B2"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$16"
+			quid       	"631A47370332"
+			supplier   	"Use Case View::Loan Officer"
+			quidu      	"631A471D0132"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$17"
+			quid       	"631A47370335"
+			supplier   	"Use Case View::Loan Application"
+			quidu      	"631A46E7027A")))
+	    (object Association "$UNNAMED$18"
+		quid       	"631A479E0234"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$19"
+			quid       	"631A479F0092"
+			supplier   	"Use Case View::Reports"
+			quidu      	"631A478602F4"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$20"
+			quid       	"631A479F0093"
+			supplier   	"Use Case View::Manager"
+			quidu      	"631A47680266")))
+	    (object Association "$UNNAMED$21"
+		quid       	"631A4B6100C8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$22"
+			quid       	"631A4B620338"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$23"
+			quid       	"631A4B620339"
+			supplier   	"Use Case View::Bank IT Officer"
+			quidu      	"631A4B1500BF")))
+	    (object Association "$UNNAMED$24"
+		quid       	"631A4BFB01BB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$25"
+			quid       	"631A4BFD0089"
+			supplier   	"Use Case View::Security's Cabin"
+			quidu      	"631A4BDC0008"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$26"
+			quid       	"631A4BFD008A"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A")))
+	    (object Association "$UNNAMED$27"
+		quid       	"631A4BFF033C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$28"
+			quid       	"631A4C00038F"
+			supplier   	"Use Case View::(Working Staff)Clerks"
+			quidu      	"631A4BDF000E"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$29"
+			quid       	"631A4C000395"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A")))
+	    (object Association "$UNNAMED$30"
+		quid       	"631A4C0303DB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$31"
+			quid       	"631A4C0701B9"
+			supplier   	"Use Case View::Manager's Cabin"
+			quidu      	"631A4BE10280"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$32"
+			quid       	"631A4C0701BC"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A")))
+	    (object Association "$UNNAMED$33"
+		quid       	"631A4C1C016C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$34"
+			quid       	"631A4C1F0193"
+			supplier   	"Use Case View::Database Admin"
+			quidu      	"631A4BB601B0"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$35"
+			quid       	"631A4C1F019D"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A")))
+	    (object Association "$UNNAMED$36"
+		quid       	"631A4CEC03CB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$37"
+			quid       	"631A4CEE00A9"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$38"
+			quid       	"631A4CEE00AA"
+			supplier   	"Use Case View::Reports"
+			quidu      	"631A478602F4")))
+	    (object Association "$UNNAMED$39"
+		quid       	"631A4CF1028C"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$40"
+			quid       	"631A4CF3019A"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$41"
+			quid       	"631A4CF3019B"
+			supplier   	"Use Case View::Loan Application"
+			quidu      	"631A46E7027A")))
+	    (object Association "$UNNAMED$42"
+		quid       	"631A4CF601DB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$43"
+			quid       	"631A4CF80099"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$44"
+			quid       	"631A4CF8009A"
+			supplier   	"Use Case View::Issues the Cheque Operations"
+			quidu      	"631A46930241")))
+	    (object Association "$UNNAMED$45"
+		quid       	"631A4CFE03BB"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$46"
+			quid       	"631A4D020028"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$47"
+			quid       	"631A4D020029"
+			supplier   	"Use Case View::Withdraw Cash from Existing Account"
+			quidu      	"631A44AF0069")))
+	    (object Association "$UNNAMED$48"
+		quid       	"631A4D0701E6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$49"
+			quid       	"631A4D0A020E"
+			supplier   	"Use Case View::Bank Server"
+			quidu      	"631A4B2D037A"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$50"
+			quid       	"631A4D0A020F"
+			supplier   	"Use Case View::Opens the Account for the customers"
+			quidu      	"631A464E03E1"))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"631A43E30185"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	1719
+		items      	(list diagram_item_list
+		    (object Label @1
+			location   	(2576, 1312)
+			nlines     	1
+			max_width  	600
+			label      	"+Issues The Loan after Enquiry")
+		    (object Label @2
+			location   	(608, 2096)
+			nlines     	3
+			max_width  	575
+			label      	"Responsible for managing")
+		    (object Label @3
+			location   	(2816, 2240)
+			nlines     	1
+			max_width  	650
+			label      	"Accesses The Bank Database")
+		    (object ClassView "Class" "Use Case View::Manager" @4
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(336, 2160)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(336, 2502)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1016
+			    justify    	0
+			    label      	"Manager")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A47680266"
+			width      	376
+			height     	526
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Loan Officer" @5
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3456, 1360)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(3456, 1730)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1135
+			    justify    	0
+			    label      	"Loan Officer")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A471D0132"
+			width      	420
+			height     	582
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Bank Customer" @6
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(496, 640)
+			label      	(object ItemLabel
+			    Parent_View 	@6
+			    location   	(496, 897)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	697
+			    justify    	0
+			    label      	"Bank Customer")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A44AB01FA"
+			width      	258
+			height     	356
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Clerk" @7
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3456, 496)
+			label      	(object ItemLabel
+			    Parent_View 	@7
+			    location   	(3456, 778)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	794
+			    justify    	0
+			    label      	"Clerk")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A463800A3"
+			width      	294
+			height     	406
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Bank IT Officer" @8
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(3776, 2224)
+			label      	(object ItemLabel
+			    Parent_View 	@8
+			    location   	(3776, 2528)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	878
+			    justify    	0
+			    label      	"Bank IT Officer")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A4B1500BF"
+			width      	325
+			height     	450
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Security's Cabin" @9
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1872, 3184)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(1872, 3435)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	676
+			    justify    	0
+			    label      	"Security's Cabin")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A4BDC0008"
+			width      	250
+			height     	344
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::(Working Staff)Clerks" @10
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2224, 3248)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(2224, 3524)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	762
+			    justify    	0
+			    label      	"(Working Staff)Clerks")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A4BDF000E"
+			width      	282
+			height     	394
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Manager's Cabin" @11
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2608, 3264)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(2608, 3537)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	762
+			    justify    	0
+			    label      	"Manager's Cabin")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A4BE10280"
+			width      	282
+			height     	388
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::Database Admin" @12
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1488, 3248)
+			label      	(object ItemLabel
+			    Parent_View 	@12
+			    location   	(1488, 3499)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	676
+			    justify    	0
+			    label      	"Database Admin")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A4BB601B0"
+			width      	250
+			height     	344
+			annotation 	8
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Reports" @13
+			location   	(1520, 2176)
+			label      	(object ItemLabel
+			    Parent_View 	@13
+			    location   	(1520, 2443)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1351
+			    justify    	0
+			    label      	"Reports")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A478602F4"
+			width      	476
+			height     	376
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$18" @14
+			location   	(897, 2162)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A479E0234"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$19" @15
+				Parent_View 	@14
+				location   	(561, 2)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A479F0092"
+				client     	@14
+				supplier   	@13
+				line_style 	0)
+			    (object RoleView "$UNNAMED$20" @16
+				Parent_View 	@14
+				location   	(561, 2)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A479F0093"
+				client     	@14
+				supplier   	@4
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Loan Application" @17
+			location   	(1072, 1408)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(1072, 1631)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1541
+			    justify    	0
+			    label      	"Loan Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A46E7027A"
+			width      	543
+			height     	287
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$12" @18
+			location   	(802, 1051)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4701030C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$13" @19
+				Parent_View 	@18
+				location   	(306, 411)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A47030252"
+				client     	@18
+				supplier   	@17
+				line_style 	0)
+			    (object RoleView "$UNNAMED$14" @20
+				Parent_View 	@18
+				location   	(306, 411)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A47030253"
+				client     	@18
+				supplier   	@6
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$15" @21
+			location   	(2296, 1378)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A473603B2"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$16" @22
+				Parent_View 	@21
+				location   	(456, -62)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A47370332"
+				client     	@21
+				supplier   	@5
+				line_style 	0)
+			    (object RoleView "$UNNAMED$17" @23
+				Parent_View 	@21
+				location   	(456, -62)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A47370335"
+				client     	@21
+				supplier   	@17
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Issues the Cheque Operations" @24
+			location   	(2416, 832)
+			label      	(object ItemLabel
+			    Parent_View 	@24
+			    location   	(2416, 1083)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1612
+			    justify    	0
+			    label      	"Issues the Cheque Operations")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A46930241"
+			width      	568
+			height     	344
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$9" @25
+			location   	(3000, 635)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A46B003CE"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @26
+				Parent_View 	@25
+				location   	(-456, 139)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A46B201AA"
+				client     	@25
+				supplier   	@24
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @27
+				Parent_View 	@25
+				location   	(-456, 139)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A46B201AB"
+				client     	@25
+				supplier   	@7
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Withdraw Cash from Existing Account" @28
+			location   	(1392, 656)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(1392, 844)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1436
+			    justify    	0
+			    label      	"Withdraw Cash from Existing Account")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A44AF0069"
+			width      	506
+			height     	218
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @29
+			location   	(879, 644)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A44B30004"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @30
+				Parent_View 	@29
+				location   	(591, 372)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A44B3036A"
+				client     	@29
+				supplier   	@28
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @31
+				Parent_View 	@29
+				location   	(591, 372)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A44B3036B"
+				client     	@29
+				supplier   	@6
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Bank Server" @32
+			location   	(2464, 2240)
+			label      	(object ItemLabel
+			    Parent_View 	@32
+			    location   	(2464, 2413)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1102
+			    justify    	0
+			    label      	"Bank Server")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A4B2D037A"
+			width      	388
+			height     	188
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$21" @33
+			location   	(3135, 2229)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4B6100C8"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$22" @34
+				Parent_View 	@33
+				location   	(-593, 37)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4B620338"
+				client     	@33
+				supplier   	@32
+				line_style 	0)
+			    (object RoleView "$UNNAMED$23" @35
+				Parent_View 	@33
+				location   	(-593, 37)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4B620339"
+				client     	@33
+				supplier   	@8
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$24" @36
+			location   	(2158, 2714)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4BFB01BB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$25" @37
+				Parent_View 	@36
+				location   	(-258, 426)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4BFD0089"
+				client     	@36
+				supplier   	@9
+				line_style 	0)
+			    (object RoleView "$UNNAMED$26" @38
+				Parent_View 	@36
+				location   	(-258, 426)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4BFD008A"
+				client     	@36
+				supplier   	@32
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$27" @39
+			location   	(2337, 2747)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4BFF033C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$28" @40
+				Parent_View 	@39
+				location   	(-79, 459)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4C00038F"
+				client     	@39
+				supplier   	@10
+				line_style 	0)
+			    (object RoleView "$UNNAMED$29" @41
+				Parent_View 	@39
+				location   	(-79, 459)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4C000395"
+				client     	@39
+				supplier   	@32
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$30" @42
+			location   	(2529, 2755)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4C0303DB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$31" @43
+				Parent_View 	@42
+				location   	(113, 467)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4C0701B9"
+				client     	@42
+				supplier   	@11
+				line_style 	0)
+			    (object RoleView "$UNNAMED$32" @44
+				Parent_View 	@42
+				location   	(113, 467)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4C0701BC"
+				client     	@42
+				supplier   	@32
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$33" @45
+			location   	(1976, 2733)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4C1C016C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$34" @46
+				Parent_View 	@45
+				location   	(-520, 493)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4C1F0193"
+				client     	@45
+				supplier   	@12
+				line_style 	0)
+			    (object RoleView "$UNNAMED$35" @47
+				Parent_View 	@45
+				location   	(-520, 493)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4C1F019D"
+				client     	@45
+				supplier   	@32
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$36" @48
+			location   	(2010, 2204)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4CEC03CB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$37" @49
+				Parent_View 	@48
+				location   	(490, 28)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4CEE00A9"
+				client     	@48
+				supplier   	@32
+				line_style 	0)
+			    (object RoleView "$UNNAMED$38" @50
+				Parent_View 	@48
+				location   	(490, 28)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4CEE00AA"
+				client     	@48
+				supplier   	@13
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$39" @51
+			location   	(1807, 1845)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4CF1028C"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$40" @52
+				Parent_View 	@51
+				location   	(735, 437)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4CF3019A"
+				client     	@51
+				supplier   	@32
+				line_style 	0)
+			    (object RoleView "$UNNAMED$41" @53
+				Parent_View 	@51
+				location   	(735, 437)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4CF3019B"
+				client     	@51
+				supplier   	@17
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$42" @54
+			location   	(2439, 1628)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4CF601DB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$43" @55
+				Parent_View 	@54
+				location   	(551, 636)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4CF80099"
+				client     	@54
+				supplier   	@32
+				line_style 	0)
+			    (object RoleView "$UNNAMED$44" @56
+				Parent_View 	@54
+				location   	(551, 636)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4CF8009A"
+				client     	@54
+				supplier   	@24
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$45" @57
+			location   	(1964, 1507)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4CFE03BB"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$46" @58
+				Parent_View 	@57
+				location   	(572, 851)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4D020028"
+				client     	@57
+				supplier   	@32
+				line_style 	0)
+			    (object RoleView "$UNNAMED$47" @59
+				Parent_View 	@57
+				location   	(572, 851)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4D020029"
+				client     	@57
+				supplier   	@28
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Opens the Account for the customers" @60
+			location   	(1920, 336)
+			label      	(object ItemLabel
+			    Parent_View 	@60
+			    location   	(1920, 540)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	1825
+			    justify    	0
+			    label      	"Opens the Account for the customers")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"631A464E03E1"
+			width      	643
+			height     	250
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$6" @61
+			location   	(2770, 420)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A467801EC"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @62
+				Parent_View 	@61
+				location   	(-686, -76)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A46790243"
+				client     	@61
+				supplier   	@60
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @63
+				Parent_View 	@61
+				location   	(-686, -76)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A46790244"
+				client     	@61
+				supplier   	@7
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$48" @64
+			location   	(2205, 1357)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"631A4D0701E6"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$49" @65
+				Parent_View 	@64
+				location   	(285, 1021)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4D0A020E"
+				client     	@64
+				supplier   	@32
+				line_style 	0)
+			    (object RoleView "$UNNAMED$50" @66
+				Parent_View 	@64
+				location   	(285, 1021)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"631A4D0A020F"
+				client     	@64
+				supplier   	@60
+				line_style 	0)))
+		    (object Label @67
+			location   	(2016, 2768)
+			nlines     	1
+			max_width  	1000
+			label      	"PEOPLE WITH ACCESS")))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"631A43E30064"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"631A43E30066"
+	logical_models 	(list unit_reference_list
+	    (object Class "NewInterface"
+		quid       	"631A43F9012C"
+		stereotype 	"Interface"
+		language   	"Java")
+	    (object Class "NewClass"
+		quid       	"631A43FD03C7"
+		language   	"Java")
+	    (object Class "NewInterface2"
+		quid       	"631A441D02C1"
+		stereotype 	"Interface"
+		language   	"Java"))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"631A43E30186"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"631A43E30066"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"631A43E30184"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"631A43E30067"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"631A43E30069"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	attributes 	(list Attribute_Set
+	    (object Attribute
+		tool       	"DDL"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"DDL"
+		name       	"default__Project"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"DDL"
+			name       	"DataBase"
+			value      	("DataBaseSet" 800))
+		    (object Attribute
+			tool       	"DDL"
+			name       	"DataBaseSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"DDL"
+				name       	"ANSI"
+				value      	800)
+			    (object Attribute
+				tool       	"DDL"
+				name       	"Oracle"
+				value      	801)
+			    (object Attribute
+				tool       	"DDL"
+				name       	"SQLServer"
+				value      	802)
+			    (object Attribute
+				tool       	"DDL"
+				name       	"Sybase"
+				value      	803)
+			    (object Attribute
+				tool       	"DDL"
+				name       	"Watcom"
+				value      	804)))
+		    (object Attribute
+			tool       	"DDL"
+			name       	"PrimaryKeyColumnName"
+			value      	"Id")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"PrimaryKeyColumnType"
+			value      	"NUMBER(5)")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"ViewName"
+			value      	"V_")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"TableName"
+			value      	"T_")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"InheritSuffix"
+			value      	"_V")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"DropClause"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"DDL"
+			name       	"BaseViews"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"DDL"
+			name       	"DDLScriptFilename"
+			value      	"DDL1.SQL")))
+	    (object Attribute
+		tool       	"DDL"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"DDL"
+			name       	"ColumnType"
+			value      	"VARCHAR")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"Length"
+			value      	"")
+		    (object Attribute
+			tool       	"DDL"
+			name       	"NullsOK"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"DDL"
+			name       	"PrimaryKey"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"DDL"
+			name       	"Unique"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"DDL"
+			name       	"CompositeUnique"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"DDL"
+			name       	"CheckConstraint"
+			value      	"")))
+	    (object Attribute
+		tool       	"DDL"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"IDL"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Project"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"CreateMissingDirectories"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"StopOnError"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"Directory"
+			value      	"AUTO GENERATE")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GeneratePreserveRegions"
+			value      	TRUE)))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"ImplementationType"
+			value      	"")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"ConstValue"
+			value      	"")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateDefaultSpecifier"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"DefaultSpecifier"
+			value      	"")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IDLElement"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IDLSpecificationType"
+			value      	("IDLSpecSet" 22))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IDLSpecSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Interface"
+				value      	22)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Typedef"
+				value      	54)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Enumeration"
+				value      	8)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Const"
+				value      	71)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Exception"
+				value      	61)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Struct"
+				value      	51)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Union"
+				value      	81)))))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Module-Spec"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"Generate"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"CmIdentification"
+			value      	(value Text "  %X% %Q% %Z% %W%"))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"CopyrightNotice"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"FileName"
+			value      	"AUTO GENERATE")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateIDLModule"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"InclusionProtectionSymbol"
+			value      	"AUTO GENERATE")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"AdditionalIncludes"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IncludeBySimpleName"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Module-Body"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"CmIdentification"
+			value      	(value Text "  %X% %Q% %Z% %W%"))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"CopyrightNotice"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"FileName"
+			value      	"AUTO GENERATE")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"AdditionalIncludes"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IncludeBySimpleName"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"OperationIsOneWay"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"Context"
+			value      	"")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"Raises"
+			value      	"")))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"CaseSpecifier"
+			value      	"")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IsReadOnly"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IsConst"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"ConstValue"
+			value      	"")))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Has"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"NameIfUnlabeled"
+			value      	"the_$supplier")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateForwardReference"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IsReadOnly"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"BoundedHasRelType"
+			value      	("HasRelTypeSet" 47))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"HasRelTypeSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Array"
+				value      	24)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Sequence"
+				value      	47)))))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Role"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"NameIfUnlabeled"
+			value      	"the_$supplier")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"DataMemberName"
+			value      	"$relationship")
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateForwardReference"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"IsReadOnly"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"IDL"
+			name       	"BoundedRoleType"
+			value      	("AssocTypeSet" 47))
+		    (object Attribute
+			tool       	"IDL"
+			name       	"AssocTypeSet"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Array"
+				value      	24)
+			    (object Attribute
+				tool       	"IDL"
+				name       	"Sequence"
+				value      	47)))))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Uses"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"GenerateForwardReference"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"default__Subsystem"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"IDL"
+			name       	"Directory"
+			value      	"AUTO GENERATE")))
+	    (object Attribute
+		tool       	"IDL"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"Java"
+		name       	"propertyId"
+		value      	"809135966")
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Project"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"CreateMissingDirectories"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"StopOnError"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Directory"
+			value      	"AUTO GENERATE")
+		    (object Attribute
+			tool       	"Java"
+			name       	"UsePrefixes"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"InstanceVariablePrefix"
+			value      	"m_")
+		    (object Attribute
+			tool       	"Java"
+			name       	"ClassVariablePrefix"
+			value      	"s_")
+		    (object Attribute
+			tool       	"Java"
+			name       	"DefaultAttributeDataType"
+			value      	"int")
+		    (object Attribute
+			tool       	"Java"
+			name       	"DefaultOperationReturnType"
+			value      	"void")))
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Class"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"Final"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"GenerateDefaultConstructor"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"ConstructorIs"
+			value      	("Ctor_Set" 62))
+		    (object Attribute
+			tool       	"Java"
+			name       	"Ctor_Set"
+			value      	(list Attribute_Set
+			    (object Attribute
+				tool       	"Java"
+				name       	"Public"
+				value      	62)
+			    (object Attribute
+				tool       	"Java"
+				name       	"Protected"
+				value      	63)
+			    (object Attribute
+				tool       	"Java"
+				name       	"Private"
+				value      	64)))
+		    (object Attribute
+			tool       	"Java"
+			name       	"GenerateFinalizer"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"GenerateStaticInitializer"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"GenerateInstanceInitializer"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Module-Spec"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"Generate"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"CmIdentification"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"Java"
+			name       	"CopyrightNotice"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"Java"
+			name       	"AdditionalImports"
+			value      	(value Text ""))))
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Module-Body"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"Generate"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"CmIdentification"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"Java"
+			name       	"CopyrightNotice"
+			value      	(value Text ""))
+		    (object Attribute
+			tool       	"Java"
+			name       	"AdditionalImports"
+			value      	(value Text ""))))
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Operation"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"Abstract"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Static"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Final"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Native"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Synchronized"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Attribute"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Final"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Transient"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Volatile"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Java"
+		name       	"default__Role"
+		value      	(list Attribute_Set
+		    (object Attribute
+			tool       	"Java"
+			name       	"GenerateDataMember"
+			value      	TRUE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"ContainerClass"
+			value      	"")
+		    (object Attribute
+			tool       	"Java"
+			name       	"InitialValue"
+			value      	"")
+		    (object Attribute
+			tool       	"Java"
+			name       	"Final"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Transient"
+			value      	FALSE)
+		    (object Attribute
+			tool       	"Java"
+			name       	"Volatile"
+			value      	FALSE)))
+	    (object Attribute
+		tool       	"Java"
+		name       	"HiddenTool"
+		value      	FALSE)
+	    (object Attribute
+		tool       	"SCC"
+		name       	"HiddenTool"
+		value      	FALSE))
+	quid       	"631A43E30068"))
